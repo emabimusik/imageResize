@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        body {
+            //margin: 0px;
+            //padding: 0px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+<a href="#" class="button" id="btn-download">Download</a>
+<canvas id="myCanvas" width="1600" height="1900"></canvas>
+<img id="canvaImag">
+
+<script>
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    /*
+    // translate context to center of canvas
+    context.translate(canvas.width / 2, canvas.height / 2);
+    var img2 = new Image();
+    img2.src="./bear.jpg";
+    context.drawImage(img2, 0, 0);
+    //context.drawImage(img2, 30, 30,40,40);
+
+
+    // flip context horizontally
+
+    context.scale(-1, 1);
+    var img  = new Image();
+    img.src="./bear.jpg";
+    context.font = '30pt Calibri';
+    context.textAlign = 'center';
+    context.fillStyle = 'blue';
+    context.drawImage(img, 0, 0)
+
+    var dataUrl = canvas.toDataURL();
+    //document.getElementById('canvaImag').src=dataUrl;
+
+    /*
+    var newImg = new Image();
+    */
+
+
+
+    //var img5 = canvas.toDataURL("./image/png");
+
+
+    img3 = new Image();
+    img3.onload = function(){
+
+        for(var i=0; i<30; i++) {
+            for(var j=0; j<30; j++) {
+                context.drawImage(img3,j*650, i*200);
+            }
+        }
+    }
+
+    img3.src = "bear2.png";
+
+    var button = document.getElementById('btn-download');
+    button.addEventListener('click', function (e) {
+        var dataURL = canvas.toDataURL();
+        button.href = dataURL;
+    });
+
+</script>
+</body>
+</html>
